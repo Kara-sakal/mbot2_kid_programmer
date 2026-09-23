@@ -1,0 +1,61 @@
+{
+  "format": "mbot2-icon-program",
+  "version": 1,
+  "program": [
+    {
+      "block_id": "start",
+      "params": [],
+      "children": []
+    },
+    {
+      "block_id": "repeat",
+      "params": [
+        "num_3"
+      ],
+      "children": [
+        {
+          "block_id": "light",
+          "params": [
+            "light_red"
+          ],
+          "children": []
+        },
+        {
+          "block_id": "sound",
+          "params": [
+            "sound_hum"
+          ],
+          "children": []
+        },
+        {
+          "block_id": "wait",
+          "params": [
+            "num_1"
+          ],
+          "children": []
+        },
+        {
+          "block_id": "light",
+          "params": [
+            "light_green"
+          ],
+          "children": []
+        },
+        {
+          "block_id": "sound",
+          "params": [
+            "sound_yeah"
+          ],
+          "children": []
+        },
+        {
+          "block_id": "wait",
+          "params": [
+            "num_1"
+          ],
+          "children": []
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,291 @@
+{
+  "blocks": [
+    {
+      "id": "start",
+      "kind": "command",
+      "icon": "▶",
+      "label": "START",
+      "color": "#c9e8ff",
+      "code": ""
+    },
+    {
+      "id": "stop",
+      "kind": "command",
+      "icon": "■",
+      "label": "STOP",
+      "color": "#f4b8b8",
+      "imports": [
+        "import mbot2"
+      ],
+      "code": "mbot2.drive_power(0, 0)"
+    },
+    {
+      "id": "forward",
+      "kind": "command",
+      "icon": "↑",
+      "label": "FORWARD",
+      "color": "#bde5b8",
+      "imports": [
+        "import time",
+        "import mbot2"
+      ],
+      "defaults": [
+        1
+      ],
+      "code": "mbot2.forward(50, {p1})"
+    },
+    {
+      "id": "back",
+      "kind": "command",
+      "icon": "↓",
+      "label": "BACK",
+      "color": "#bde5b8",
+      "imports": [
+        "import time",
+        "import mbot2"
+      ],
+      "defaults": [
+        1
+      ],
+      "code": "mbot2.backward(50, {p1})"
+    },
+    {
+      "id": "left",
+      "kind": "command",
+      "icon": "↶",
+      "label": "LEFT",
+      "color": "#b9d7f5",
+      "imports": [
+        "import mbot2"
+      ],
+      "defaults": [
+        0.5
+      ],
+      "code": "mbot2.turn(-90)"
+    },
+    {
+      "id": "right",
+      "kind": "command",
+      "icon": "↷",
+      "label": "RIGHT",
+      "color": "#b9d7f5",
+      "imports": [
+        "import mbot2"
+      ],
+      "defaults": [
+        0.5
+      ],
+      "code": "mbot2.turn(90)"
+    },
+    {
+      "id": "wait",
+      "kind": "command",
+      "icon": "◷",
+      "label": "WAIT",
+      "color": "#f5df9d",
+      "imports": [
+        "import time"
+      ],
+      "defaults": [
+        1
+      ],
+      "code": "time.sleep({p1})"
+    },
+    {
+      "id": "repeat",
+      "kind": "container",
+      "icon": "↻",
+      "label": "REPEAT",
+      "color": "#d9c2f0",
+      "defaults": [
+        2
+      ],
+      "header": "for _ in range({params}):"
+    },
+    {
+      "id": "if_true",
+      "kind": "container",
+      "icon": "?",
+      "label": "IF",
+      "color": "#f6c59f",
+      "defaults": [
+        1
+      ],
+      "header": "if {params}:"
+    },
+    {
+      "id": "else",
+      "kind": "container",
+      "icon": "-",
+      "label": "ELSE",
+      "color": "#f6c59f",
+      "header": "else:"
+    },
+    {
+      "id": "light",
+      "kind": "command",
+      "icon": "☀",
+      "label": "LIGHT",
+      "color": "#ffe69a",
+      "imports": [
+        "import cyberpi"
+      ],
+      "code": "cyberpi.led.on({params})"
+    },
+    {
+      "id": "sound",
+      "kind": "command",
+      "icon": "♪",
+      "label": "SOUND",
+      "color": "#d8c7f2",
+      "imports": [
+        "import cyberpi"
+      ],
+      "code": "cyberpi.audio.play({params})"
+    },
+    {
+      "id": "num_0",
+      "kind": "parameter",
+      "icon": "0",
+      "label": "0",
+      "value": 0,
+      "color": "#fff2b2"
+    },
+    {
+      "id": "num_1",
+      "kind": "parameter",
+      "icon": "1",
+      "label": "1",
+      "value": 1,
+      "color": "#fff2b2"
+    },
+    {
+      "id": "num_2",
+      "kind": "parameter",
+      "icon": "2",
+      "label": "2",
+      "value": 2,
+      "color": "#fff2b2"
+    },
+    {
+      "id": "num_3",
+      "kind": "parameter",
+      "icon": "3",
+      "label": "3",
+      "value": 3,
+      "color": "#fff2b2"
+    },
+    {
+      "id": "num_4",
+      "kind": "parameter",
+      "icon": "4",
+      "label": "4",
+      "value": 4,
+      "color": "#fff2b2"
+    },
+    {
+      "id": "num_5",
+      "kind": "parameter",
+      "icon": "5",
+      "label": "5",
+      "value": 5,
+      "color": "#fff2b2"
+    },
+    {
+      "id": "num_6",
+      "kind": "parameter",
+      "icon": "6",
+      "label": "6",
+      "value": 6,
+      "color": "#fff2b2"
+    },
+    {
+      "id": "num_7",
+      "kind": "parameter",
+      "icon": "7",
+      "label": "7",
+      "value": 7,
+      "color": "#fff2b2"
+    },
+    {
+      "id": "num_8",
+      "kind": "parameter",
+      "icon": "8",
+      "label": "8",
+      "value": 8,
+      "color": "#fff2b2"
+    },
+    {
+      "id": "num_9",
+      "kind": "parameter",
+      "icon": "9",
+      "label": "9",
+      "value": 9,
+      "color": "#fff2b2"
+    },
+    {
+      "id": "op_lt",
+      "kind": "parameter",
+      "icon": "<",
+      "label": "<",
+      "value": "<",
+      "color": "#ffffff"
+    },
+    {
+      "id": "op_gt",
+      "kind": "parameter",
+      "icon": ">",
+      "label": ">",
+      "value": ">",
+      "color": "#ffffff"
+    },
+    {
+      "id": "op_eq",
+      "kind": "parameter",
+      "icon": "=",
+      "label": "=",
+      "value": "==",
+      "color": "#ffffff"
+    },
+    {
+      "id": "light_red",
+      "kind": "parameter",
+      "icon": "●",
+      "label": "RED",
+      "value": "255, 0, 0, id='all'",
+      "color": "#f4b8b8"
+    },
+    {
+      "id": "light_green",
+      "kind": "parameter",
+      "icon": "●",
+      "label": "GREEN",
+      "value": "0, 255, 0, id='all'",
+      "color": "#bde5b8"
+    },
+    {
+      "id": "light_off",
+      "kind": "parameter",
+      "icon": "○",
+      "label": "OFF",
+      "value": "0, 0, 0, id='all'",
+      "color": "#eeeeee"
+    },
+    {
+      "id": "sound_yeah",
+      "kind": "parameter",
+      "icon": "♪",
+      "label": "Yeah",
+      "value": "\"yeah\"",
+      "color": "#e7dcf7"
+    },
+    {
+      "id": "sound_hum",
+      "kind": "parameter",
+      "icon": "♪",
+      "label": "Hum",
+      "value": "\"hum\"",
+      "color": "#e7dcf7"
+    }
+  ]
+}
