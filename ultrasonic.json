@@ -1,0 +1,80 @@
+{
+  "format": "mbot2-icon-program",
+  "version": 1,
+  "program": [
+    {
+      "block_id": "start",
+      "params": [],
+      "children": []
+    },
+    {
+      "block_id": "bright",
+      "params": [
+        "num_7"
+      ],
+      "children": []
+    },
+    {
+      "block_id": "repeat",
+      "params": [
+        "num_6"
+      ],
+      "children": [
+        {
+          "block_id": "forward",
+          "params": [
+            "num_1"
+          ],
+          "children": []
+        },
+        {
+          "block_id": "clear",
+          "params": [],
+          "children": []
+        },
+        {
+          "block_id": "print",
+          "params": [
+            "ultrasonic_dist"
+          ],
+          "children": []
+        },
+        {
+          "block_id": "if_true",
+          "params": [
+            "ultrasonic_dist",
+            "op_lt",
+            "num_1",
+            "num_0"
+          ],
+          "children": [
+            {
+              "block_id": "light",
+              "params": [
+                "light_red"
+              ],
+              "children": []
+            },
+            {
+              "block_id": "stop",
+              "params": [],
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "block_id": "light",
+      "params": [
+        "light_green"
+      ],
+      "children": []
+    },
+    {
+      "block_id": "stop",
+      "params": [],
+      "children": []
+    }
+  ]
+}

@@ -6,7 +6,10 @@
       "icon": "▶",
       "label": "START",
       "color": "#c9e8ff",
-      "code": ""
+      "imports": [
+        "import cyberpi"
+      ],
+      "code": "def Face_sleep():\n    global wait_time\n    cyberpi.console.clear()\n    cyberpi.console.println(\"    -    -\")\n    cyberpi.console.println(\"      \")\n    cyberpi.console.println(\"        __\")\n\ndef Face_ready():\n    global wait_time\n    cyberpi.console.clear()\n    cyberpi.console.println(\"    o    o\")\n    cyberpi.console.println(\"      \")\n    cyberpi.console.println(\"      --  \")\n\ndef Face_success():\n    global wait_time\n    cyberpi.console.clear()\n    cyberpi.console.println(\"    ^    ^\")\n    cyberpi.console.println(\"      \")\n    cyberpi.console.println(\"      \\_/\")\n\ndef Wakeup():\n    global wait_time\n    Face_sleep()\n    time.sleep(1)\n    cyberpi.audio.play('hi')\n    Face_success()\n    cyberpi.console.print(\"\\nПривет!\")\n    time.sleep(1)\n    Face_ready()\n    cyberpi.console.print(\"\\nЯ Роботик\")\n    time.sleep(1) \n \nWakeup()"
     },
     {
       "id": "stop",
