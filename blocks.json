@@ -15,9 +15,9 @@
       "label": "STOP",
       "color": "#f4b8b8",
       "imports": [
-        "import mbot2"
+        "import cyberpi"
       ],
-      "code": "mbot2.drive_power(0, 0)"
+      "code": "cyberpi.stop_all()"
     },
     {
       "id": "forward",
@@ -54,7 +54,7 @@
       "kind": "command",
       "icon": "↶",
       "label": "LEFT",
-      "color": "#b9d7f5",
+      "color": "#bde5b8",
       "imports": [
         "import mbot2"
       ],
@@ -68,7 +68,7 @@
       "kind": "command",
       "icon": "↷",
       "label": "RIGHT",
-      "color": "#b9d7f5",
+      "color": "#bde5b8",
       "imports": [
         "import mbot2"
       ],
@@ -82,7 +82,7 @@
       "kind": "command",
       "icon": "◷",
       "label": "WAIT",
-      "color": "#f5df9d",
+      "color": "#f0e000",
       "imports": [
         "import time"
       ],
@@ -133,6 +133,17 @@
       "code": "cyberpi.led.on({params})"
     },
     {
+      "id": "bright",
+      "kind": "command",
+      "icon": "☀☀",
+      "label": "BRIGHT",
+      "color": "#ffe69a",
+      "imports": [
+        "import mbuild"
+      ],
+      "code": "mbuild.ultrasonic2.set_bri({params}0, 'all', 1)"
+    },
+    {
       "id": "sound",
       "kind": "command",
       "icon": "♪",
@@ -142,6 +153,28 @@
         "import cyberpi"
       ],
       "code": "cyberpi.audio.play({params})"
+    },
+    {
+      "id": "print",
+      "kind": "command",
+      "icon": "▤",
+      "label": "PRINT",
+      "color": "#b847d2",
+      "imports": [
+        "import cyberpi"
+      ],
+      "code": "cyberpi.console.print({params})"
+    },
+    {
+      "id": "clear",
+      "kind": "command",
+      "icon": "▤",
+      "label": "CLEAR",
+      "color": "#b847d2",
+      "imports": [
+        "import cyberpi"
+      ],
+      "code": "cyberpi.console.clear()"
     },
     {
       "id": "num_0",
@@ -251,7 +284,7 @@
       "id": "light_red",
       "kind": "parameter",
       "icon": "●",
-      "label": "RED",
+      "label": "☀",
       "value": "255, 0, 0, id='all'",
       "color": "#f4b8b8"
     },
@@ -259,7 +292,7 @@
       "id": "light_green",
       "kind": "parameter",
       "icon": "●",
-      "label": "GREEN",
+      "label": "☀",
       "value": "0, 255, 0, id='all'",
       "color": "#bde5b8"
     },
@@ -267,7 +300,7 @@
       "id": "light_off",
       "kind": "parameter",
       "icon": "○",
-      "label": "OFF",
+      "label": "☀\nOFF",
       "value": "0, 0, 0, id='all'",
       "color": "#eeeeee"
     },
@@ -275,7 +308,7 @@
       "id": "sound_yeah",
       "kind": "parameter",
       "icon": "♪",
-      "label": "Yeah",
+      "label": "♪ \nYe",
       "value": "\"yeah\"",
       "color": "#e7dcf7"
     },
@@ -283,9 +316,17 @@
       "id": "sound_hum",
       "kind": "parameter",
       "icon": "♪",
-      "label": "Hum",
+      "label": "♪\nHm",
       "value": "\"hum\"",
       "color": "#e7dcf7"
+    },
+    {
+      "id": "ultrasonic_dist",
+      "kind": "parameter",
+      "icon": "⩞",
+      "label": "⩞",
+      "value": "mbuild.ultrasonic2.get(1)",
+      "color": "#5070f7"
     }
   ]
 }
